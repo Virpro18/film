@@ -24,7 +24,7 @@ document.getElementsByClassName("search-button")[0].addEventListener("click", ()
         modalButton.addEventListener("click", async function () {
           const imdbID = this.getAttribute("data-imdbid");
           try {
-            const response = await fetch(`http://www.omdbapi.com/?apikey=dca61bcc&i=${imdbID}`);
+            const response = await fetch(`https://www.omdbapi.com/?apikey=dca61bcc&i=${imdbID}`);
             if (!response.ok) {
               throw new Error(`Gagal mengambil data film. Status: ${response.status}`);
             }
