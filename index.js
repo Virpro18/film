@@ -1,4 +1,6 @@
-document.getElementsByClassName("search-button")[0].addEventListener("click", () => {
+document.getElementsByClassName("form-input")[0]
+.addEventListener("submit", (event) => {
+  event.preventDefault()
   const inpVal = document.getElementsByClassName("input-keyword")[0].value
   fetch(`https://www.omdbapi.com/?apikey=dca61bcc&s=${inpVal}`)
     .then((response) => response.json())
