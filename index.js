@@ -1,6 +1,6 @@
 document.getElementsByClassName("search-button")[0].addEventListener("click", () => {
   const inpVal = document.getElementsByClassName("input-keyword")[0].value
-  fetch(`http://www.omdbapi.com/?apikey=dca61bcc&s=${inpVal}`)
+  fetch(`https://www.omdbapi.com/?apikey=dca61bcc&s=${inpVal}`)
     .then((response) => response.json())
     .then((data) => {
       const movies = data.Search;
